@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LambdaFunctions>
+  <Function Name="TestFloridaPOSRecycle">FloridaPOS</Function>
+  <Function Name="TestFloridaPOSRecycle2">FloridaPOSRD</Function>
+  <Function Name="TestFloridaPOSRecycle3">FloridaPOSTitan</Function>
+  <Function Name="TestFloridaPOSRecycle4">FloridaWeb</Function>
+  <Function Name="TestFloridaPOSRecycle5">FloridaWebRD</Function>
+  <Function Name="TestFloridaPOSRecycle6">FloridaWebTitan</Function>
+  <Function Name="TestFloridaPOSRecycle7">FloridaRDR</Function>
+</LambdaFunctions>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvokeLambda", "InvokeLambda\InvokeLambda.csproj", "{4AB5EC9B-0155-446E-A52C-02C4BFA14CF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AB5EC9B-0155-446E-A52C-02C4BFA14CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB5EC9B-0155-446E-A52C-02C4BFA14CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB5EC9B-0155-446E-A52C-02C4BFA14CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB5EC9B-0155-446E-A52C-02C4BFA14CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67E74D56-3493-44D1-A1DA-0403A70AAA33}
+	EndGlobalSection
+EndGlobal
