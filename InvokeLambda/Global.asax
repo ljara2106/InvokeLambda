@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="ProdLambaRecycle.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="InvokeLambda.Global" Language="C#" %>
