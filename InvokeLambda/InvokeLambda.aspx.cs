@@ -43,7 +43,6 @@ namespace InvokeLambda
         {
             string selectedFunctionName = ddlLambdaOptions.SelectedItem.Value;
 
-
             // Check if "Select Application" is selected
             if (string.IsNullOrEmpty(selectedFunctionName))
             {
@@ -55,13 +54,13 @@ namespace InvokeLambda
             string awsSecretAccessKey = WebConfigurationManager.AppSettings["AWSSecretAccessKey"];
             string lambdaRegion = WebConfigurationManager.AppSettings["LambdaRegion"];
 
-           
             // Show the processing animation
-            ScriptManager.RegisterStartupScript(this, GetType(), "showProcessing", "showProcessing();", true);
+            ScriptManager.RegisterStartupScript(this, GetType(), "disableButtonForXSeconds", "disableButtonForXSeconds();", true);
 
 
             try
             {
+                
                 var lambdaClient = new AmazonLambdaClient(awsAccessKeyId, awsSecretAccessKey, RegionEndpoint.GetBySystemName(lambdaRegion));
 
                 var request = new InvokeRequest
@@ -69,7 +68,7 @@ namespace InvokeLambda
                     FunctionName = selectedFunctionName, // Use the selected Lambda function name
                     InvocationType = InvocationType.RequestResponse,
                     LogType = LogType.Tail,
-                    Payload = "{}" // You can pass input data as JSON here if needed
+                    Payload = "{}" // pass input data as JSON here if needed
                 };
 
                 var response = lambdaClient.InvokeAsync(request).Result;
@@ -92,6 +91,7 @@ namespace InvokeLambda
                 {
                     lblResult.Text = $@"Lambda Response: <span style='color:red;'>Error 😒 ({response.HttpStatusCode})</span>";
                 }
+
             }
             catch (AmazonServiceException awsEx)
             {
@@ -103,14 +103,14 @@ namespace InvokeLambda
 
             catch (Exception ex)
             {
-                lblResult.Text = $@"Lambda Response: <span style='color:red;'>Error 😒 ({ex.Message})</span>";
+                lblResult.Text = $@"Lambda Response: <span style='color:red;'> {ddlLambdaOptions.SelectedItem.Text} - Error 😒 ({ex.Message})</span>";
                 LogException("Unhandled Exception", ex.ToString());
             }
 
             finally
             {
                 // Hide the processing animation
-                ScriptManager.RegisterStartupScript(this, GetType(), "hideProcessing", "hideProcessing();", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "disableButtonForXSeconds", "disableButtonForXSeconds();", true);
             }
         }
 
@@ -179,10 +179,9 @@ namespace InvokeLambda
             string logMessage = $"Timestamp: {DateTime.Now:yyyy-MM-dd HH:mm:ss} | Category: {category} | IP Address: {userIpAddress} | Exception Message: {ex.Message}";
 
             if (!File.Exists(logFilePath))
-            {
-                // If the log file for the current date doesn't exist, create a new log file
+            {              
                 Directory.CreateDirectory(logFolderPath);
-                File.WriteAllText(logFilePath, ""); // Create an empty log file
+                File.WriteAllText(logFilePath, ""); 
             }
 
             // Append the log message with a newline to the log file
@@ -207,7 +206,7 @@ namespace InvokeLambda
             if (!File.Exists(logFilePath))
             {     
                 Directory.CreateDirectory(logFolderPath);
-                File.WriteAllText(logFilePath, ""); // Create an empty log file
+                File.WriteAllText(logFilePath, ""); 
             }
 
             File.AppendAllText(logFilePath, logMessage + System.Environment.NewLine + System.Environment.NewLine); 
