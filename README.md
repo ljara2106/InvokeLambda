@@ -72,4 +72,5 @@ To prevent spamming of the "Invoke" button, a JavaScript timer is implemented. I
 3. Access the application through a web browser.
 4. Select a Lambda function from the dropdown menu.
 5. Click the "Invoke" button to trigger the selected Lambda function.
+6. NOTE: It is a good idea, to password protect this application to avoid security issues.
 
