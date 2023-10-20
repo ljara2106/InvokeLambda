@@ -1,5 +1,7 @@
 # Invoke Lambda
 
+![GitHub last commit](https://img.shields.io/github/last-commit/ljara2106/InvokeLambda)
+
 **Invoke Lambda** is a simple web application designed to remotely trigger AWS Lambda functions. It provides a user-friendly interface for selecting and invoking Lambda functions stored in your AWS account. This README provides an overview of the application's structure, its requirements, and how to set it up.
 
 ## Table of Contents
