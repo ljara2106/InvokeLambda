@@ -361,3 +361,22 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Additional ignores for .NET Framework 4.8 Web Forms project
+/bin/
+/obj/
+*.resharper
+*.ncrunch*
+*.cache
+*.bak
+*.Backup
+*.tmp
+*.temp
+*.TestResults/
+*.Publish.xml
+*.idea/
+*.DS_Store
+Thumbs.db
+aws-lambda-tools-defaults.json
+.env
+.env.*
