@@ -380,3 +380,5 @@ Thumbs.db
 aws-lambda-tools-defaults.json
 .env
 .env.*
+Web.config
+
