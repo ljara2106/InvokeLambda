@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LambdaFunctions>
-  <Function Name="TestFloridaPOSRecycle">POS</Function>
-  <Function Name="TestFloridaPOSRecycle2">POSRD</Function>
-  <Function Name="TestFloridaPOSRecycle3">POSTitan</Function>
+  <Function Name="LambdaFunction1">Label1</Function>
+  <Function Name="LambdaFunction2">Label2</Function>
+  <Function Name="LambdaFunction3">Label3</Function>
 </LambdaFunctions>
